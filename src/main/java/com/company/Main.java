@@ -8,7 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("====================");
-		Corredor c1 = new Corredor("Andersson", "Marcos", 19);
+		Corredor c1 = new Corredor("Andersson", "Marcos", 19, 12);
 		try {
 			System.out.println(c1.obtenerEdad());
 		} catch (EdadException e) {

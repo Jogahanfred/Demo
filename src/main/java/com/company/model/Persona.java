@@ -9,34 +9,34 @@ public abstract class Persona implements IParticipante {
 	protected String apellidos;
 	protected int edad;
 
-	public Persona(String nombres, String apellidos, int edad) {
+	protected Persona(String nombres, String apellidos, int edad) {
 		super();
 		this.nombres = nombres;
 		this.apellidos = apellidos;
 		this.edad = edad;
 	}
 
-	public String getNombres() {
+	protected String getNombres() {
 		return nombres;
 	}
 
-	public void setNombres(String nombres) {
+	protected void setNombres(String nombres) {
 		this.nombres = nombres;
 	}
 
-	public String getApellidos() {
+	protected String getApellidos() {
 		return apellidos;
 	}
 
-	public void setApellidos(String apellidos) {
+	protected void setApellidos(String apellidos) {
 		this.apellidos = apellidos;
 	}
 
-	public int getEdad() {
+	protected int getEdad() {
 		return edad;
 	}
 
-	public void setEdad(int edad) {
+	protected void setEdad(int edad) {
 		this.edad = edad;
 	}
 
@@ -44,7 +44,7 @@ public abstract class Persona implements IParticipante {
 	public String obtenerEdad() throws EdadException {
 		String msg;
 		if (this.edad >= 18) {
-			msg = this.nombres + " tiene " + this.edad +" años.";
+			msg = this.nombres + " tiene " + this.edad + " años.";
 			return msg;
 		} else {
 			throw new EdadException("Persona no puede ser menor de edad");
