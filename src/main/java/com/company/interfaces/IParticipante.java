@@ -2,7 +2,6 @@ package com.company.interfaces;
 
 public interface IParticipante {
 
-	public int obtenerEdad();
-
-	public int calcularNota();
+	public String obtenerEdad() throws Exception;
+	
 }

@@ -6,6 +6,14 @@ public class Persona implements IParticipante {
 
 	private String nombres;
 	private String apellidos;
+	private int edad;
+
+	public Persona(String nombres, String apellidos, int edad) {
+		super();
+		this.nombres = nombres;
+		this.apellidos = apellidos;
+		this.edad = edad;
+	}
 
 	public String getNombres() {
 		return nombres;
@@ -23,16 +31,24 @@ public class Persona implements IParticipante {
 		this.apellidos = apellidos;
 	}
 
-	@Override
-	public int obtenerEdad() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
 	}
 
 	@Override
-	public int calcularNota() {
-		// TODO Auto-generated method stub
-		return 0;
+	public String obtenerEdad() throws Exception {
+		String msg;
+		if (this.edad >= 18) {
+			msg = this.nombres + " tiene " + this.edad +" años.";
+			return msg;
+		} else {
+			throw new Exception("Persona no puede ser menor de edad");
+		}
+
 	}
 
 }
