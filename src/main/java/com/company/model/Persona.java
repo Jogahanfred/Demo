@@ -3,11 +3,11 @@ package com.company.model;
 import com.company.exception.EdadException;
 import com.company.interfaces.IParticipante;
 
-public class Persona implements IParticipante {
+public abstract class Persona implements IParticipante {
 
-	private String nombres;
-	private String apellidos;
-	private int edad;
+	protected String nombres;
+	protected String apellidos;
+	protected int edad;
 
 	public Persona(String nombres, String apellidos, int edad) {
 		super();
