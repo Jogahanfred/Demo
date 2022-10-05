@@ -29,4 +29,10 @@ public class Persona implements IParticipante {
 		return 0;
 	}
 
+	@Override
+	public int calcularNota() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
