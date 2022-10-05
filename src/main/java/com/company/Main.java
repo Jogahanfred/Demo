@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.exception.EdadException;
 import com.company.model.Persona;
 
 public class Main {
@@ -10,7 +11,7 @@ public class Main {
 		Persona p1 = new Persona("Andersson", "Marcos", 19);
 		try {
 			System.out.println(p1.obtenerEdad());	
-		} catch (Exception e) {
+		} catch (EdadException e) {
 			System.out.println(e.getMessage());
 		}
 	}

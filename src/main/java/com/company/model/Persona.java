@@ -1,5 +1,6 @@
 package com.company.model;
 
+import com.company.exception.EdadException;
 import com.company.interfaces.IParticipante;
 
 public class Persona implements IParticipante {
@@ -40,13 +41,13 @@ public class Persona implements IParticipante {
 	}
 
 	@Override
-	public String obtenerEdad() throws Exception {
+	public String obtenerEdad() throws EdadException {
 		String msg;
 		if (this.edad >= 18) {
 			msg = this.nombres + " tiene " + this.edad +" años.";
 			return msg;
 		} else {
-			throw new Exception("Persona no puede ser menor de edad");
+			throw new EdadException("Persona no puede ser menor de edad");
 		}
 
 	}
